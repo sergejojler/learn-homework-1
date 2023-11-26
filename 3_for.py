@@ -21,7 +21,38 @@ def main():
     Эта функция вызывается автоматически при запуске скрипта в консоли
     В ней надо заменить pass на ваш код
     """
-    pass
+    list1 = [
+        
+        {'product': 'iPhone 12', 'items_sold': [363, 500, 224, 358, 480, 476, 470, 216, 270, 388, 312, 186]},
+        {'product': 'Xiaomi Mi11', 'items_sold': [317, 267, 290, 431, 211, 354, 276, 526, 141, 453, 510, 316]},
+        {'product': 'Samsung Galaxy 21', 'items_sold': [343, 390, 238, 437, 214, 494, 441, 518, 212, 288, 272, 247]},
+
+        ]
+    
+    total_sales = 0
+    total_items = 0
+    
+    for data in list1:
+        
+        product = data['product']
+        items_sold = data['items_sold']
+        
+    
+        sales_am = sum(items_sold)
+        print (f"Cуммарное количество продаж для - '{product}': {sales_am}")
+
+        sales_aver_items = int(sales_am / len(items_sold))
+        print (f"Cреднее количество продаж для - '{product}': {sales_aver_items}")
+
+        total_sales += sales_am
+        total_items += len(items_sold)
+
+    print(f"Суммарное количество продаж всех товаров: {total_sales}")
+
+    print(f"Среднее количество продаж всех товаров: {total_items}")
+      
+
+
     
 if __name__ == "__main__":
     main()
