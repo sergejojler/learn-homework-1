@@ -15,12 +15,21 @@
 
 """
 
-def main():
-    """
-    Эта функция вызывается автоматически при запуске скрипта в консоли
-    В ней надо заменить pass на ваш код
-    """
-    pass
-    
+row_one = str(input("Введите первую строку: "))
+row_two = str(input("Введите вторую строку: "))
+
+def main(row_one, row_two):
+    row_one_len = len(row_one)
+    row_two_len = len(row_two)
+
+    if row_one_len == row_two_len:
+        print ("1")
+    elif row_one_len > row_two_len:
+        print ("2")
+    elif row_one_len < row_two_len:
+        print ("3")
+        
+main (row_one, row_two)
+  
 if __name__ == "__main__":
     main()
